@@ -26,4 +26,13 @@ class REsplin_LogProductUpdate_Model_Observer
 			'product-updates.log'
 		);
 	}
+
+	public function logUpdateBefore(Varien_Event_Observer $observer)
+	{
+		Mage::log(
+			"Save before...",
+			null,
+			'product-updates.log'
+		);
+	}
 }

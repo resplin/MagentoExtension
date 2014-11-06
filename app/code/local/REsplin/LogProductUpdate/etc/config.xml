@@ -76,6 +76,24 @@
 
 			</catalog_product_save_after>
 
+			<catalog_product_save_before>
+
+				<observers>
+
+					<resplin_logproductupdate>
+
+						<class>resplin_logproductupdate/observer</class>
+
+						<method>logUpdateBefore</method>
+
+						<type>singleton</type>
+
+					</resplin_logproductupdate>
+
+				</observers>
+
+			</catalog_product_save_before>
+
 		</events>
 
 	</global>
