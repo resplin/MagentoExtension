@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<REsplin_CustomerNumber>
+			<active>true</active>
+			<codePool>local</codePool>
+		</REsplin_CustomerNumber>
+	</modules>
+</config>
