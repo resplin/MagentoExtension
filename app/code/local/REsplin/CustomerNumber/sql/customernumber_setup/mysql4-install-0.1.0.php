@@ -20,7 +20,7 @@ $setup->addAttribute('customer', 'customer_number', array(
 
 $setup->addAttributeToGroup(
 	$entityTypeId,
-	attributeSetId,
+	$attributeSetId,
 	$attributeGroupId,
 	'customer_number',
 	'999'  //sort_order
