@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<REsplin_CustomerDisabler>
+			<version>0.1.0</version>
+		</REsplin_CustomerDisabler>
+	</modules>
+
+    <global>
+        <models>
+            <REsplin_CustomerDisabler>
+                <class>REsplin_CustomerDisabler_Model</class>
+            </REsplin_CustomerDisabler>
+        </models>
+
+        <resources>
+            <customerdisabler_setup>
+                <setup>
+                    <module>REsplin_CustomerDisabler</module>
+                    <class>REsplin_CustomerDisabler_Model_Resource_Setup</class>
+                </setup>
+            </customerdisabler_setup>
+        </resources>
+    </global>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <REsplin_CustomerDisabler after="Mage_Adminhtml">REsplin_CustomerDisabler</REsplin_CustomerDisabler>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+    <frontend>
+        <events>
+            <customer_customer_authenticated>
+                <observers>
+                    <resplin_customerdisabler>
+                        <class>REsplin_CustomerDisabler/observer</class>
+                        <method>customerAuthenticated</method>
+                        <type>singleton</type>
+                    </resplin_customerdisabler>
+                </observers>
+            </customer_customer_authenticated>
+        </events>
+    </frontend>
+
+    <adminhtml>
+        <events>
+            <core_block_abstract_to_html_before>
+                <observers>
+                    <resplin_customerdisabler>
+                        <class>REsplin_CustomerDisabler/observer</class>
+                        <method>beforeBlockToHtml</method>
+                        <type>singleton</type>
+                    </resplin_customerdisabler>
+                </observers>
+            </core_block_abstract_to_html_before>
+            <eav_collection_abstract_load_before>
+                <observers>
+                    <resplin_customerdisabler>
+                        <class>REsplin_CustomerDisabler/observer</class>
+                        <method>beforeCollectionLoad</method>
+                    </resplin_customerdisabler>
+                </observers>
+            </eav_collection_abstract_load_before>
+        </events>
+    </adminhtml>
+</config>
