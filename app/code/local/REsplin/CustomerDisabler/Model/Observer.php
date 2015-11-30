@@ -6,9 +6,9 @@ class REsplin_CustomerDisabler_Model_Observer
         $customer = $observer->getEvent()->getModel();
 		$isActive = $customer->getData('resplin_is_active');
 
-		if ($isActive === 0)
+		if ($isActive == 0)
 		{
-			error_log('Inactive customer ' . $customer->getData('id') . ' attempted to login');
+			error_log('Inactive customer ' . $customer->getData('entity_id') . ' attempted to login');
 			Mage::throwException('Customer is currently inactive.  Login prohibited.');
 		}
 	}
