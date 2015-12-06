@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Alanstormdotcom_Configviewer>
+			<version>0.1.0</version>
+		</Alanstormdotcom_Configviewer>
+	</modules>
+
+	<global>
+		<models>
+			<alanstormdotcom_configviewer>
+				<class>Alanstormdotcom_Configviewer_Model</class>
+			</alanstormdotcom_configviewer>
+		</models>
+
+		<helpers>
+			<Alanstormdotcom_Configviewer>
+				<class>Alanstormdotcom_Configviewer_Helper</class>
+			</Alanstormdotcom_Configviewer>
+		</helpers>
+
+		<events>
+		</events>
+	</global>
+</config>
