@@ -7,19 +7,16 @@
 	</modules>
 
 	<global>
-		<models>
-			<alanstormdotcom_configviewer>
-				<class>Alanstormdotcom_Configviewer_Model</class>
-			</alanstormdotcom_configviewer>
-		</models>
-
-		<helpers>
-			<Alanstormdotcom_Configviewer>
-				<class>Alanstormdotcom_Configviewer_Helper</class>
-			</Alanstormdotcom_Configviewer>
-		</helpers>
-
 		<events>
+			<controller_front_init_routers>
+				<observers>
+					<alanstorm_configviewer_model_observer>
+						<type>singleton</type>
+						<class>Alanstormdotcom_Configviewer_Model_Observer</class>
+						<method>checkForConfigRequest</method>
+					</alanstorm_configviewer_model_observer>
+				</observers>
+			</controller_front_init_routers>
 		</events>
 	</global>
 </config>
