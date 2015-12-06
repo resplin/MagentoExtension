@@ -10,9 +10,16 @@
         <models>
             <REsplin_CustomerDisabler>
                 <class>REsplin_CustomerDisabler_Model</class>
+				<resourceModel>resplin_customerdisabler_resource</resourceModel>
             </REsplin_CustomerDisabler>
         </models>
 
+		<helpers>
+			<REsplin_CustomerDisabler>
+				<class>REsplin_CustomerDisabler_Helper</class>
+			</REsplin_CustomerDisabler>
+		</helpers>
+		
         <resources>
             <customerdisabler_setup>
                 <setup>
@@ -21,6 +28,12 @@
                 </setup>
             </customerdisabler_setup>
         </resources>
+
+		<blocks>
+			<REsplin_CustomerDisabler>
+				<class>REsplin_CustomerDisabler_Block</class>
+			</REsplin_CustomerDisabler>
+		</blocks>
     </global>
 
     <admin>
@@ -39,11 +52,11 @@
         <events>
             <customer_customer_authenticated>
                 <observers>
-                    <resplin_customerdisabler>
+                    <REsplin_CustomerDisabler>
                         <class>REsplin_CustomerDisabler/observer</class>
                         <method>customerAuthenticated</method>
                         <type>singleton</type>
-                    </resplin_customerdisabler>
+                    </REsplin_CustomerDisabler>
                 </observers>
             </customer_customer_authenticated>
         </events>
