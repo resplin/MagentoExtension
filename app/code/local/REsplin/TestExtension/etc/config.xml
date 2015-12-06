@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<REsplin_TestExtension>
+			<version>0.1.0</version>
+		</REsplin_TestExtension>
+	</modules>
+
+	<global>
+		<models>
+			<resplin_testextension>
+				<class>REsplin_TestExtension_Model</class>
+			</resplin_testextension>
+		</models>
+
+		<helpers>
+			<REsplin_TestExtension>
+				<class>REsplin_TestExtension_Helper</class>
+			</REsplin_TestExtension>
+		</helpers>
+		
+		<events>
+			<catalog_product_save_after>
+				<observers>
+					<resplin_testextension>
+						<class>resplin_testextension/observer</class>
+						<method>catalogProductSaveAfter</method>
+						<type>singleton</type>
+					</resplin_testextension>
+				</observers>
+			</catalog_product_save_after>
+		</events>
+	</global>
+	<admin>
+		<routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<REsplin_TestExtension after="Mage_Adminhtml">REsplin_TestExtension</REsplin_TestExtension>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+	</admin>
+</config>
