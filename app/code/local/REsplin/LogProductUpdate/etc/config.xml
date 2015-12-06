@@ -44,6 +44,13 @@
 
 		</models>    
 
+		<!-- Defining a helper -->
+		<helpers>
+			<REsplin_LogProductUpdate>
+				<class>REsplin_LogProductUpdate_Helper</class>
+			</REsplin_LogProductUpdate>
+		</helpers>
+		
 		<!-- Defining an event observer -->
 		<events>
 
@@ -65,7 +72,7 @@
 						<class>resplin_logproductupdate/observer</class>
 
 						<!-- The method of the class to be called -->
-						<method>logUpdate</method>
+						<method>catalogProductSaveAfter</method>
 
 						<!-- The type of class to instantiate -->
 						<type>singleton</type>
@@ -84,7 +91,7 @@
 
 						<class>resplin_logproductupdate/observer</class>
 
-						<method>logUpdateBefore</method>
+						<method>catalogProductSaveBefore</method>
 
 						<type>singleton</type>
 
@@ -94,6 +101,94 @@
 
 			</catalog_product_save_before>
 
+			<catalog_product_load_after>
+
+				<observers>
+
+					<resplin_logproductupdate>
+
+						<class>resplin_logproductupdate/observer</class>
+
+						<method>catalogProductLoadAfter</method>
+
+						<type>singleton</type>
+
+					</resplin_logproductupdate>
+				
+				</observers>
+
+			</catalog_product_load_after>
+
+			<catalog_product_collection_load_after>
+			
+				<observers>
+				
+					<resplin_logproductupdate>
+
+						<class>resplin_logproductupdate/observer</class>
+
+						<method>catalogProductCollectionLoadAfter</method>
+
+						<type>singleton</type>
+
+					</resplin_logproductupdate>
+				
+				</observers>
+			
+			</catalog_product_collection_load_after>
+			
+			<adminhtml_customer_save_after>
+			
+				<observers>
+				
+					<resplin_logproductupdate>
+					
+						<class>resplin_logproductupdate/observer</class>
+						
+						<method>customerSaveAfter</method>
+						
+						<type>singleton</type>
+					
+					</resplin_logproductupdate>
+				
+				</observers>
+			
+			</adminhtml_customer_save_after>
+			
+			<adminhtml_customer_prepare_save>
+
+				<observers>
+			
+					<resplin_logproductupdate>
+					
+						<class>resplin_logproductupdate/observer</class>
+						
+						<method>customerPrepareSave</method>
+						
+						<type>singleton</type>
+					
+					</resplin_logproductupdate>
+				
+				</observers>
+			
+			</adminhtml_customer_prepare_save>
+
+			<controller_action_postdispatch>
+
+				<observers>
+
+					<resplin_logproductupdate>
+
+						<class>resplin_logproductupdate/observer</class>
+
+						<method>controllerActionPostDispatch</method>
+
+					</resplin_logproductupdate>
+
+				</observers>
+
+			</controller_action_postdispatch>
+			
 		</events>
 
 	</global>
