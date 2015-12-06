@@ -6,20 +6,20 @@
 		</Alanstormdotcom_Helloworld>
 	</modules>
 
-	<global>
-		<models>
-			<alanstormdotcom_helloworld>
-				<class>Alanstormdotcom_Helloworld_Model</class>
-			</alanstormdotcom_helloworld>
-		</models>
-
-		<helpers>
-			<Alanstormdotcom_Helloworld>
-				<class>Alanstormdotcom_Helloworld_Helper</class>
-			</Alanstormdotcom_Helloworld>
-		</helpers>
-
-		<events>
-		</events>
-	</global>
+	<frontend>
+		<routers>
+			<!-- This should be lowercase version of the module name -->
+			<helloworld>
+				<use>standard</use>
+				<args>
+					<!--
+						Full name of the module, including its package/namespace name.
+						This will be used by the system to locate the controller files.
+					-->
+					<module>Alanstormdotcom_Helloworld</module>
+					<frontName>helloworld</frontName>
+				</args>
+			</helloworld>
+		</routers>
+	</frontend>
 </config>
