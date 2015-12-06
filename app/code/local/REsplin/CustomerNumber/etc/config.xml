@@ -40,9 +40,9 @@
 			<core_block_abstract_to_html_before>
 				<observers>
 					<resplin_customernumber_before_block_to_html>
-						<type>singleton</type>
-						<class>REsplin_CustomerNumber/observer</class>
-						<method>beforeBlockToHtml</method>
+                        <class>REsplin_CustomerNumber/observer</class>
+                        <method>beforeBlockToHtml</method>
+                        <type>singleton</type>
 					</resplin_customernumber_before_block_to_html>
 				</observers>
 			</core_block_abstract_to_html_before>
@@ -51,6 +51,7 @@
 					<resplin_customernumber_before_collection_load>
 						<class>REsplin_CustomerNumber/observer</class>
 						<method>beforeCollectionLoad</method>
+                        <type>singleton</type>
 					</resplin_customernumber_before_collection_load>
 				</observers>
 			</eav_collection_abstract_load_before>
