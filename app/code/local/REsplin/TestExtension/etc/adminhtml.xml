@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+	<config>
+		<menu>
+			<resplin translate="title" module="REsplin_TestExtension">
+				<title>Test Extension</title>
+				<sort_order>999</sort_order>
+				<children>
+					<Page>
+						<title>Test Extension</title>
+						<sort_order>1</sort_order>
+						<action>adminhtml/TestExtension/index</action>
+					</Page>
+				</children>
+			</resplin>
+		</menu>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<resplin translate="title" module="REsplin_TestExtension">
+							<title>Test Extension</title>
+							<sort_order>900</sort_order>
+							<children>
+								<Page>
+									<title>Test Extension</title>
+								</Page>
+							</children>
+						</resplin>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</config>
