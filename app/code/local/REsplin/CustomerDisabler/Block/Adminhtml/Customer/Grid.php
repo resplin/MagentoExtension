@@ -5,7 +5,6 @@ class REsplin_CustomerDisabler_Block_Adminhtml_Customer_Grid extends Mage_Adminh
 	public function __construct()
 	{
 		parent::__construct();
-		
 	}
 	
 	protected function _prepareCollection()
