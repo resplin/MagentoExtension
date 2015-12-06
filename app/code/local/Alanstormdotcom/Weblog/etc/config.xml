@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Alanstormdotcom_Weblog>
+			<version>0.1.0</version>
+		</Alanstormdotcom_Weblog>
+	</modules>
+
+	<global>
+		<models>
+			<alanstormdotcom_weblog>
+				<class>Alanstormdotcom_Weblog_Model</class>
+			</alanstormdotcom_weblog>
+		</models>
+
+		<helpers>
+			<Alanstormdotcom_Weblog>
+				<class>Alanstormdotcom_Weblog_Helper</class>
+			</Alanstormdotcom_Weblog>
+		</helpers>
+
+		<events>
+		</events>
+	</global>
+</config>
