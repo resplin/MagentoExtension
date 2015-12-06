@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Alanstormdotcom_Helloworld>
+			<version>0.1.0</version>
+		</Alanstormdotcom_Helloworld>
+	</modules>
+
+	<global>
+		<models>
+			<alanstormdotcom_helloworld>
+				<class>Alanstormdotcom_Helloworld_Model</class>
+			</alanstormdotcom_helloworld>
+		</models>
+
+		<helpers>
+			<Alanstormdotcom_Helloworld>
+				<class>Alanstormdotcom_Helloworld_Helper</class>
+			</Alanstormdotcom_Helloworld>
+		</helpers>
+
+		<events>
+		</events>
+	</global>
+</config>
